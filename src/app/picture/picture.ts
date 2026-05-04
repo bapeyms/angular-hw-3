@@ -11,13 +11,23 @@ import { CommonModule } from '@angular/common';
 })
 export class Picture implements OnInit {
   
-  picture?: Painting;
+  allPictures: Painting[] = [];
+  selectedPicture?: Painting;
+
   isDescriptionVisible: boolean = false;
+
   constructor(private pictureService: PictureService) {}
 
   ngOnInit() {
-    this.picture = this.pictureService.getById(1);
+    this.allPictures = this.pictureService.getAll();
   }
+  selectPicture(p: Painting) {
+    this.selectedPicture = p;
+  }
+  backToGallery() {
+    this.selectedPicture = undefined;
+  }
+
   toggleDescription() {
     this.isDescriptionVisible = !this.isDescriptionVisible;
   }

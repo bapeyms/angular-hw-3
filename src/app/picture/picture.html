@@ -1,13 +1,20 @@
-<div class="container" *ngIf="picture; else loading">
-    <h2 class="title">{{picture.title | uppercase}}</h2>
+<div *ngIf="!selectedPicture" class="gallery-grid">
+    <div *ngFor="let p of allPictures" class="thumbnail" (click)="selectPicture(p)">
+        <img [src]="p.image" [alt]="p.title" class="gallery-pictures">
+        <h3 class="title">{{p.title}}</h3>
+    </div>
+</div>
+
+<div *ngIf="selectedPicture" class="container">
+    <button class="back-to-gallery" (click)="backToGallery()">Back To Gallery</button>
+    <h2 class="title"> {{selectedPicture.title | uppercase}}</h2>
     <div class="card">
-        <img [src]="picture.image" [alt]="picture.title" class="main-img">
+        <img [src]="selectedPicture.image" [alt]="selectedPicture.title" class="main-img">
         <div class="info">
-            <p><strong>Author:</strong> {{picture.author}}</p>
-            <p><strong>Year:</strong> {{picture.year}}</p>
-            <p><strong>Size:</strong> {{picture.size}}</p>
-            <p><strong>Location:</strong> {{picture.location}}</p>
-            <p><strong>Description:</strong> {{picture.description}}</p>
+            <p><strong>Author:</strong> {{selectedPicture.author}}</p>
+            <p><strong>Year:</strong> {{selectedPicture.year}}</p>
+            <p><strong>Size:</strong> {{selectedPicture.size}}</p>
+            <p><strong>Location:</strong> {{selectedPicture.location}}</p>
         </div>
     </div>
 </div>
