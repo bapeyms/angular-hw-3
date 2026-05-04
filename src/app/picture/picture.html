@@ -17,7 +17,19 @@
             <p><strong>Location:</strong> {{selectedPicture.location}}</p>
         </div>
     </div>
+
+    <div class="other-works" *ngIf="getOtherAuthorWorks().length > 0">
+        <h3>Other Works by {{selectedPicture.author}}: </h3>
+        <div class="other-works-grid">
+            <div *ngFor="let other of getOtherAuthorWorks()" class="mini-thumbnail" (click)="selectPicture(other)">
+            <img [src]="other.image" [alt]="other.title" class="other-picture">
+            <strong><p>{{other.title}}</p></strong>
+            </div>
+        </div>
+    </div>
 </div>
+
+
 
 <ng-template #loading>
     <div class="loader">

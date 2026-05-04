@@ -51,6 +51,24 @@ export class PictureService {
       size: '24 x 33 cm',
       location: 'Museum of Modern Art, New York',
       image: '/the_persistence_of_memory.jpg'
+    },
+    {
+      id: 5,
+      title: 'Café Terrace at Night',
+      author: 'Vincent van Gogh',
+      year: 1888,
+      size: '80.7 x 65.3 cm',
+      location: 'Kröller-Müller Museum, Otterlo',
+      image: '/cafe_terrace_at_night.jpg'
+    },
+    {
+      id: 6,
+      title: 'Irises',
+      author: 'Vincent van Gogh',
+      year: 1889,
+      size: '71 x 93 cm',
+      location: 'J. Paul Getty Museum, Los Angeles',
+      image: '/irises.jpg'
     }
   ];
 

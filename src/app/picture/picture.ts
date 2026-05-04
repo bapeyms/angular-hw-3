@@ -23,9 +23,19 @@ export class Picture implements OnInit {
   }
   selectPicture(p: Painting) {
     this.selectedPicture = p;
+    window.scrollTo(0, 0);
   }
   backToGallery() {
     this.selectedPicture = undefined;
+  }
+  getOtherAuthorWorks() :Painting[] {
+    if(!this.selectedPicture) {
+      return []
+    }
+    return this.allPictures.filter(p =>
+      p.author === this.selectedPicture?.author &&
+      p.id !== this.selectedPicture?.id
+    )
   }
 
   toggleDescription() {
