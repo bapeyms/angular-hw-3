@@ -69,6 +69,51 @@ export class PictureService {
       size: '71 x 93 cm',
       location: 'J. Paul Getty Museum, Los Angeles',
       image: '/irises.jpg'
+    },
+    {
+      id: 7,
+      title: 'Anxiety',
+      author: 'Edvard Munch',
+      year: 1894,
+      size: '94 x 74 cm',
+      location: 'Munch Museum, Oslo',
+      image: '/anxiety.jpg'
+    },
+    {
+      id: 8,
+      title: 'The Dance of Life',
+      author: 'Edvard Munch',
+      year: 1899,
+      size: '125 x 191 cm',
+      location: 'National Gallery, Oslo',
+      image: '/the_dance_of_life.jpg'
+    },
+    {
+      id: 9,
+      title: 'Vampire',
+      author: 'Edvard Munch',
+      year: 1893,
+      size: '91 x 109 cm',
+      location: 'Munch Museum, Oslo',
+      image: '/vampire.jpg'
+    },
+    {
+      id: 10,
+      title: 'The Last Supper',
+      author: 'Leonardo da Vinci',
+      year: 1498,
+      size: '460 x 880 cm',
+      location: 'Santa Maria delle Grazie, Milan',
+      image: '/the_last_supper.webp'
+    },
+    {
+      id: 11,
+      title: 'Lady with an Ermine',
+      author: 'Leonardo da Vinci',
+      year: 1490,
+      size: '54 x 39 cm',
+      location: 'Czartoryski Museum, Kraków',
+      image: '/lady_with_an_ermine.jpg'
     }
   ];
 
