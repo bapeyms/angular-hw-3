@@ -1,1 +1,13 @@
-<p>picture works!</p>
+<div class="container" *ngIf="picture; else loading">
+    <h2 class="title">{{picture.title | uppercase}}</h2>
+    <div class="card">
+        <img [src]="picture.image" [alt]="picture.title" class="main-img">
+        <div class="info">
+            <p>Author: {{picture.author}}</p>
+            <p>Year: {{picture.year}}</p>
+            <p>Size: {{picture.size}}</p>
+            <p>Location: {{picture.location}}</p>
+            <p>Description: {{picture.description}}</p>
+        </div>
+    </div>
+</div>
