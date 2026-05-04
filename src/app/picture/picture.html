@@ -3,11 +3,17 @@
     <div class="card">
         <img [src]="picture.image" [alt]="picture.title" class="main-img">
         <div class="info">
-            <p>Author: {{picture.author}}</p>
-            <p>Year: {{picture.year}}</p>
-            <p>Size: {{picture.size}}</p>
-            <p>Location: {{picture.location}}</p>
-            <p>Description: {{picture.description}}</p>
+            <p><strong>Author:</strong> {{picture.author}}</p>
+            <p><strong>Year:</strong> {{picture.year}}</p>
+            <p><strong>Size:</strong> {{picture.size}}</p>
+            <p><strong>Location:</strong> {{picture.location}}</p>
+            <p><strong>Description:</strong> {{picture.description}}</p>
         </div>
     </div>
 </div>
+
+<ng-template #loading>
+    <div class="loader">
+        <p>Picture uploading...</p>
+    </div>
+</ng-template>
